@@ -14,39 +14,97 @@
 </head>
 
 <body>
-	<header>
-		<a href="index.html"><img src="images/life-recovery-logo.png" alt="Life Recovery The Christian 12Steps logo"></a>
-	</header>
-	
-	<nav>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="classes.html">Classes</a></li>
-			<li><a href="counseling.html">Counseling</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-	</nav>
-	
-	<!-- Use the main are to add the main content of the webpage -->
-	<main>
-	
-		<div id="contact">
+
+	<div id="container">
+			<!-- Mobile Nav -->
+			<nav class="mobile-nav">
+				<div id="menu-links">
+					<a href="index.html">Home</a>
+					<a href="classes.html">Classes</a>
+					<a href="counseling.html">Counseling</a>
+					<a href="contact.html">Contact Us</a>
+				</div>
+				<a class="menu-icon" onclick="hamburger()">
+					<div>&#9776;</div>
+				</a>
+			</nav>
+			
+			<header>
+				<a href="index.html"><img src="images/life-recovery-logo.png" alt="Life Recovery The Christian 12Steps logo"></a>
+			</header>
+			
+			<!-- Tablet, Desktop Nav -->
+			<nav class="tablet-desktop">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="classes.html">Classes</a></li>
+					<li><a href="counseling.html">Counseling</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
 		
-			<h3>Ready to start your Recovery from Addiction? Contact us today.</h3>
-			<h4 class="mobile tel-link"><a href="tel:9405553201">(940) 555-3201</a></h4>
-			<h4 class="tablet-desktop tel-num">(940) 555-3201</h4>
-			<h4>Email us: <a href="mailto:recoveryministries@hotmail.com" class="contact-email-link">recoveryministries@hotmail.com</a></h4>
-			<h4>Visit us at: Weatherford College at 225 College Park Drive, Weatherford Texas 76086.</h4>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3355.9206972683887!2d-97.795155889635!3d32.74129638570242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8651fdfb8ac942b5%3A0xa6afccce1d14c43d!2sWeatherford%20College!5e0!3m2!1sen!2sus!4v1694804760591!5m2!1sen!2sus" allowfullscreen class="map"></iframe>
-		</div>
+		<!-- Use the main are to add the main content of the webpage -->
+		<main>
 		
-	</main>
+			<div id="contact">
+			
+				<h3>Ready to start your Recovery from Addiction? Contact us today.</h3>
+				<h4 class="mobile tel-link"><a href="tel:9405553201">(940) 555-3201</a></h4>
+				<h4 class="tablet-desktop tel-num">(940) 555-3201</h4>
+				<h4>Email us: <a href="mailto:recoveryministries@hotmail.com" class="contact-email-link">recoveryministries@hotmail.com</a></h4>
+				<h4>Visit us at: Weatherford College at 225 College Park Drive, Weatherford Texas 76086.</h4>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3355.9206972683887!2d-97.795155889635!3d32.74129638570242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8651fdfb8ac942b5%3A0xa6afccce1d14c43d!2sWeatherford%20College!5e0!3m2!1sen!2sus!4v1694804760591!5m2!1sen!2sus" allowfullscreen class="map"></iframe>
+			</div>
+			
+			<div id="form">
+			
+			<form class="form-grid">
+					<fieldset>
+						<legend>Customer Information</legend>
+							<label for="fName">First Name:</label>
+							<input type="text" name="fName" id="fName">
+							
+							<label for="lName">Last Name:</label>
+							<input type="text" name="lName" id="lName">
+							
+							<label for="email">Email:</label>
+							<input type="email" name="email" id="email">
+							
+							<label for="phone">Phone:</label>
+							<input type="tel" name="phone" id="phone">
+					</fieldset>
+					
+					<fieldset>
+						<legend>Payment Information</legend>
+							<label for="cName">Card Name:</label>
+							<input type="text" name="cName" id="cName">
+							
+							<label for="cNum">Card Number:</label>
+							<input type="number" name="cNum" id="cNum">
+							
+							<label for="expDate">Expiration Date:</label>
+							<input type="text" name="expDate" id="expDate" placeholder="MM/YY">
+							
+							<label for="ccv">CCV:</label>
+							<input type="number" name="ccv" id="ccv">
+					</fieldset>
+					
+					<input type="submit" id="submit" value="Submit" class="btn">
+				
+				</form>
+			</div>
+
+		</main>
+
+		<footer>
+			<p>Banda: This project is for a class assignment. 2023</p>
+			<p>&copy; Copy Right 2023. All Rights Reserved.</p>
+			<p><a href="mailto:recoveryministries@hotmail.com">recoveryministries@hotmail.com</a></p>
+		</footer>
+		
+	</div>
 	
-	<footer>
-		<p>Banda: This project is for a class assignment. 2023</p>
-		<p>&copy; Copy Right 2023. All Rights Reserved.</p>
-		<p><a href="mailto:recoveryministries@hotmail.com">recoveryministries@hotmail.com</a></p>
-	</footer>
+	<script src="scripts/script.js"></script>
 	
 </body>
 </html>

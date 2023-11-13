@@ -28,8 +28,6 @@ img {
 
 /* Style rule for header */
 header {
-	position: -webkit-sticky;
-	position: sticky;
 	top: 0;
 	background-color: green;
 	height: 190px;
@@ -69,12 +67,30 @@ nav li a {
 	text-decoration: none;
 }
 
+/* Style rules for hamburger menu */
+.mobile-nav a {
+	color: #000;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	font-size: 2em;
+	text-decoration: none;
+	padding: 3%;
+	display: block;
+}
+
+.mobile-nav a.menu-icon {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
 /* Show mobile class hide tablet-desktop class */
 .mobile {
 	display: block;
 }
 
-.tablet-desktop {
+.tablet-desktop, #menu-links {
 	display: none;
 }
 
@@ -132,7 +148,7 @@ main {
 
 #classes {
 	color: green;
-	font-style: bold;
+	font-style: italic;
 	font-size: 1.25em;
 }
 
@@ -150,12 +166,16 @@ main {
 
 #counseling {
 	color: green;
-	font-style: bold;
+	font-style: italic;
 	font-size: 1.1em;
 }
 
 .round {
 	border-radius: 15px;
+}
+
+.mobile h3 {
+	text-shadow: 5px 5px 8px #ccc;
 }
 
 ol li {
@@ -165,7 +185,7 @@ ol li {
 #contact {
 	text-align: center;
 	color: green;
-	font-style: bold;
+	font-style: italic;
 }
 
 #contact .contact-email-link {
@@ -183,6 +203,46 @@ ol li {
 	border: 5px solid green;
 	width: 95%;
 	height: 50%;
+}
+
+/* Style rules for form elements */
+#form {
+	margin-top: 2%;
+	background-color: #f2f2f2;
+	padding: 2%;
+}
+
+#form h2 {
+	text-align:center;
+}
+
+/* Style rules for form elements */
+fieldset, input, select, textarea {
+		margin-bottom: 2%;
+}
+
+fieldset legend {
+	font-weight: bold;
+	font-size: 1.25em;
+}
+
+label {
+	display: block;
+	padding-top: 3%;
+}
+
+.form-container {
+    text-align: center;
+}
+
+form #submit {
+	margin: 0 auto;
+	border: none;
+	display: block;
+	padding: 2%;
+	background-color: #b3b3b3;
+	font-size: 1em;
+	border-radius: 10px;
 }
 
 /* Style rules for footer content */
@@ -206,7 +266,7 @@ footer p a {
 		display: block;
 	}
 
-	.mobile {
+	.mobile , .mobile-nav {
 		display: none;
 	}
 	
@@ -258,7 +318,7 @@ footer p a {
 	h2 {
 		color: green;
 		text-align: center;
-		padding: 1 1;
+		padding: 1em 1em;
 	}
 	
 	h3 {
@@ -281,8 +341,83 @@ footer p a {
 		border: 2px solid green;
 	}
 	
-}
+	/* Tablet Viewport: Style rules for table */
+	table {
+		border: 1px solid #000;
+		border-collapse: collapse;
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	caption {
+		font-size: 1.5em;
+		font-weight: bold;
+		padding: 1%;
+	}
+	
+	th, td {
+		border: 1px solid #000;
+		padding: 2%;
+	}
+	
+	th {
+		background-color: green;
+		color: #fff;
+		font-size: 1.15em;
+	}
+	
+	tr:nth-child(odd) {
+		background-color: #ccc;
+	}
 
+	/* Animation */
+	@keyframes color {
+		from { background-color: green; }
+		to { background-color: #fff; }
+	}
+	@-webkit-keyframes color {
+		from { background-color: green; }
+		to { background-color: #fff; }
+	}
+	
+	.cross {
+		width: 200px;
+		height: 200px;
+		position: relative;
+		margin-left: 6%;
+		background-color: #fff;
+		cursor: pointer;
+		overflow: hidden;
+	}
+
+	.cross::before,
+	.cross::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 20%;
+		background-color: green; /* Initial color */
+		transition: background-color 0.5s ease-in-out; 
+	}
+
+	.cross::before {
+		top: 30%;
+	}
+
+	.cross::after {
+		left: 40%;
+		width: 20%;
+		height: 100%;
+	}
+
+	.cross:hover::before,
+	.cross:hover::after {
+		background-color: #000;
+	}
+
+	.cross:hover {
+		transform: scale(1); 
+	}
 
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 1038px), print {
@@ -326,6 +461,17 @@ footer p a {
 	main h1 {
 		font-size: 1.8em;
 	}
+	
+	.form-grid {
+		display: grid;
+		grid-template-columns: auto auto ;
+		grid-gap: 20px;
+	}
+	
+	.btn {
+		grid-column: 1 / span 2;
+	}
+	
 
 }
 	
@@ -335,6 +481,10 @@ footer p a {
 	#container {
 		width: 1920px;
 		margin: 0 auto;
+	}
+	
+	table {
+		width: 80%;
 	}
 }
 
