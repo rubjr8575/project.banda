@@ -1,0 +1,4 @@
+http://www.exampledomain.com/index.html
+hhtp://www.exampledomain.com/classes.html
+http://www.exampledomain.com/counseling.html
+http://www.exampledomain.com/contact.html
